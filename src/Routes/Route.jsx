@@ -3,6 +3,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import Home from '../Page/Home/Home';
 import Main from '../LayOut/Main';
 import Category from '../Page/Category';
+import NewsLayOut from '../LayOut/NewsLayOut';
+import News from '../Page/News/News';
 
 const router = createBrowserRouter([
     {
@@ -14,9 +16,19 @@ const router = createBrowserRouter([
                 element:<Home></Home>,
             },
             {
-                path:'category',
+                path:'/category/:id',
                 element:<Category></Category>,
-                loader:()=> fetch('http://localhost:5000/')
+                
+            }
+        ]
+    },
+    {
+        path:'news',
+        element:<NewsLayOut></NewsLayOut>,
+        children:[
+            {
+                path:':id',
+                element:<News></News>,
             }
         ]
     }
