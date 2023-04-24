@@ -1,8 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import Header from '../Page/Header/Header';
-
-import LeftNav from '../Page/LeftNav/LeftNav';
 import RightNav from '../Page/RightNav/RightNav';
+import { Outlet } from 'react-router-dom';
 
 const NewsLayOut = () => {
     return (
