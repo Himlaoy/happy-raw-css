@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React from 'react';
 import { Button, Card, Image } from 'react-bootstrap';
 import { FaRegBookmark, FaShareAlt } from 'react-icons/fa';
@@ -13,7 +14,7 @@ const NewsCard = ({ news }) => {
                 <Image style={{ width: '40px' }} src={author?.img} roundedCircle />
                 <div className='flex-grow-1 ms-2'>
                     <p className='mb-0'>{author?.name}</p>
-                    <p>{author?.published_date}</p>
+                    <p>{moment().format("dd-MM-YYYY")}</p>
                 </div>
                 <div>
                     <FaRegBookmark></FaRegBookmark>
@@ -29,7 +30,7 @@ const NewsCard = ({ news }) => {
 
             </Card.Body>
             <Card.Footer className="text-muted">
-                
+
             </Card.Footer>
         </Card>
     );
