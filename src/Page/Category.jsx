@@ -1,9 +1,13 @@
 import React from 'react';
-import {  useParams } from 'react-router-dom';
+import { Collapse } from 'react-bootstrap';
+import {  useLoaderData, useParams } from 'react-router-dom';
 
 const Category = () => {
     const {id} = useParams()
-   
+    const news = useLoaderData()
+    const {author,category_id,details,image_url,rating,thumbnail_url,title,total_view,_id} = news
+    console.log(news);
+
 
     return (
         <div>
