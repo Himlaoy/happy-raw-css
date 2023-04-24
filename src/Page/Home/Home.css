@@ -1,0 +1,75 @@
+.bg{
+    background-image: url('/image/background.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color: blanchedalmond;
+}
+
+.items{
+    display: flex;
+}
+
+.item{
+    margin-right: 10px;
+    list-style: none;
+
+
+}
+
+.details{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.author img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.author{
+    display: flex;
+    gap: 10px;
+    border-right: 2px solid salmon;
+}
+
+.details{
+    display: flex;
+    padding-top: 20px;
+    
+}
+
+.png{
+    background-color: aliceblue;
+    width: 150px;
+    
+}
+
+.details .png{
+    gap: 10px;
+}
+
+.pngg{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-left: 10px;
+}
+
+/* <div style={{
+    height: '450px',
+    width: '100%',
+    backgroundSize: 'cover',
+    backgroundImage: `url("image/background.jpg")`
+}}> */
