@@ -30,16 +30,18 @@ const NewsCard = ({ news }) => {
                 </Card.Text>
 
             </Card.Body>
-            <Card.Footer className="text-muted">
+            <Card.Footer className="text-muted d-flex justify-content-between align-items-center">
                 <div>
                     <Rating
                         placeholderRating={rating?.number}
+                        readonly
                         emptySymbol={<FaRegStar></FaRegStar>}
-                        placeholderSymbol={<FaStar></FaStar>}
+                        placeholderSymbol={<FaStar className='text-warning'></FaStar>}
                         fullSymbol={<FaStar></FaStar>}
                     >
 
                     </Rating>
+                    {rating?.number}
                 </div>
                 <div className='d-flex'>
                     <p><FaEye></FaEye></p>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const LeftNav = () => {
     const [category, setCategory] = useState([])
-    console.log(category)
+    // console.log(category)
 
 
     useEffect(()=>{
