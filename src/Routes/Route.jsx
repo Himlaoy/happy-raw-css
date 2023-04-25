@@ -1,16 +1,33 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import Home from '../Page/Home/Home';
+import { Navigate, createBrowserRouter } from 'react-router-dom';
+
 import Main from '../LayOut/Main';
 import Category from '../Page/Category';
 import NewsLayOut from '../LayOut/NewsLayOut';
 import News from '../Page/News/News';
 import LoginLayOut from '../LayOut/LoginLayOut';
 
+import Register from '../Page/Register/Register';
+import Login from '../Page/Register/Login';
+
 const router = createBrowserRouter([
     {
         path:'/',
-        element: <LoginLayOut></LoginLayOut>
+        element: <LoginLayOut></LoginLayOut>,
+        children:[
+            {
+                path:'/',
+                element: <Navigate to="/category/0"></Navigate>,
+            },
+            {
+                path:'login',
+                element:<Login></Login>
+            },
+            {
+                path:'register',
+                element:<Register></Register>,
+            }
+        ]
     },
     {
         path:'category',
