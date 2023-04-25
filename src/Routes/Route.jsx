@@ -5,19 +5,19 @@ import Main from '../LayOut/Main';
 import Category from '../Page/Category';
 import NewsLayOut from '../LayOut/NewsLayOut';
 import News from '../Page/News/News';
+import LoginLayOut from '../LayOut/LoginLayOut';
 
 const router = createBrowserRouter([
     {
         path:'/',
+        element: <LoginLayOut></LoginLayOut>
+    },
+    {
+        path:'category',
         element:<Main></Main>,
         children:[
             {
-                path:'/',
-                element:<Category></Category>,
-                loader: ()=> fetch('http://localhost:5000/news')
-            },
-            {
-                path:'/category/:id',
+                path:':id',
                 element:<Category></Category>,
                 loader:({params})=>fetch(`http://localhost:5000/category/${params.id}`)
                 
